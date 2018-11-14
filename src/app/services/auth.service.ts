@@ -7,7 +7,7 @@ import {Router} from '@angular/router';
 export class AuthService {
   /**
    * We'll often need to take action based on whether we are logged into our app.
-   * This property will allows to check our logged in status.
+   * This property will allows to store our logged in status.
    */
   private isAuthenticated = false;
 
