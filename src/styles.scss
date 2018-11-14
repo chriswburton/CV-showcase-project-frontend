@@ -15,3 +15,26 @@ input {
 button {
   @extend .p-4, .bg-green-dark, .text-white;
 }
+
+th, td {
+  @extend .p-4, .border;
+}
+th {
+  @extend .bg-blue, .text-white;
+}
+
+.card {
+  @extend .m-4, .p-8, .bg-blue-lighter, .rounded;
+}
+
+.badge {
+  @extend .block, .p-2, .rounded, .text-white, .text-center;
+
+  &--success {
+    background-color: green;
+  }
+
+  &--error {
+    background-color: red;
+  }
+}

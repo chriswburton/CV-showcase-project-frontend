@@ -9,6 +9,9 @@ import { ApplicationsComponent } from './pages/applications/applications.compone
 import { LogOutComponent } from './pages/log-out/log-out.component';
 import { LogInComponent } from './pages/log-in/log-in.component';
 import {AuthService} from './services/auth.service';
+import { JobAdvertTableComponent } from './ui/job-advert-table/job-advert-table.component';
+import {JobService} from './services/job.service';
+import { ProfileSummaryComponent } from './ui/profile-summary/profile-summary.component';
 
 @NgModule({
   declarations: [
@@ -17,13 +20,18 @@ import {AuthService} from './services/auth.service';
     DashboardComponent,
     ApplicationsComponent,
     LogOutComponent,
-    LogInComponent
+    LogInComponent,
+    JobAdvertTableComponent,
+    ProfileSummaryComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [AuthService],
+  providers: [
+    AuthService,
+    JobService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

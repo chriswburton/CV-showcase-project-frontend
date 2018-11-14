@@ -11,6 +11,6 @@ export class JobAdvertModel {
    */
   getJobSummary(): string {
     return `Opportunity for a ${this.jobTitle} at ${this.organisation}
-            (£${this.salaryBandLowest} - £${this.salaryBandHighest}) depending on experience)`;
+            (£${this.salaryBandLowest} - £${this.salaryBandHighest} depending on experience)`;
   }
 }

@@ -1,0 +1,16 @@
+<h2 class="mb-4">Welcome back, Chris</h2>
+<ul class="flex list-reset">
+  <li class="flex-1 card">
+    <h3 class="mb-4">Profile</h3>
+    <p class="mb-2 text-lg">{{ user.getFullName() }}</p>
+    <p>{{ user.getDescription() }}</p>
+  </li>
+  <li class="flex-1 card">
+    <h3 class="mb-4">Your history</h3>
+    <p>You've got <strong>{{ user.getYearsOfExperience() }} year(s) experience</strong> from <strong>{{ user.getJobCount() }} previous job(s)</strong></p>
+  </li>
+  <li class="flex-1 card">
+    <h3 class="mb-4">Applications</h3>
+    <p>You have 0 active job applications.</p>
+  </li>
+</ul>

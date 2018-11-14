@@ -4,7 +4,8 @@ import {Reference} from '../interfaces/reference.interface';
 export class UserModel {
   private firstname: string;
   private surname: string;
-  private startDate: Date;
+  private description = 'No description provided';
+  private availableFrom: Date;
   private desiredSalary: number;
   private experience: EmploymentRecord[];
   private references: Reference[];
@@ -14,6 +15,13 @@ export class UserModel {
    */
   getFullName(): string {
     return `${this.firstname} ${this.surname}`;
+  }
+
+  /**
+   * Method for getting the statement that describes a user
+   */
+  getDescription(): string {
+    return this.description;
   }
 
   /**
@@ -27,9 +35,16 @@ export class UserModel {
         if (!employment.endDate) {
           employment.endDate = new Date();
         }
-        return acc + (employment.endDate - employment.startDate);
+        return acc + (+employment.endDate - +employment.startDate);
       }, 0);
     // we can now return this an a number of years (approximate)
     return Math.round(totalMilliseconds / (1000 * 60 * 60 * 24 * 365));
+  }
+
+  /**
+   * Method for retrieving the number of jobs a user has had in their career
+   */
+  getJobCount(): number {
+    return this.experience.length;
   }
 }
