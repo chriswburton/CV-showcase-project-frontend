@@ -3,7 +3,9 @@
     <h1>Recruitment App</h1>
   </div>
   <div class="w-2/3">
-    <ul class="flex list-reset">
+    <ul
+      *ngIf="authService.getAuthenticationStatus()"
+      class="flex list-reset">
       <li
         class="p-4"
         *ngFor="let page of pages">

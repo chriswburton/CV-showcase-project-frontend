@@ -8,6 +8,7 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ApplicationsComponent } from './pages/applications/applications.component';
 import { LogOutComponent } from './pages/log-out/log-out.component';
 import { LogInComponent } from './pages/log-in/log-in.component';
+import {AuthService} from './services/auth.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { LogInComponent } from './pages/log-in/log-in.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

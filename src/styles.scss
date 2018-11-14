@@ -1,5 +1,17 @@
+@import 'assets/styles/tailwind/_preflight.scss';
+@import 'assets/styles/tailwind/_components.scss';
+@import 'assets/styles/tailwind/_utilities.scss';
+
 html,
 body {
   width: 100%;
   min-height: 100%;
+}
+
+input {
+  @extend .block, .w-full, .p-4, .border, .my-4, .rounded;
+}
+
+button {
+  @extend .p-4, .bg-green-dark, .text-white;
 }
