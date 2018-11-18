@@ -12,6 +12,7 @@
             "element",
             "app",
             "kebab-case"
-        ]
+        ],
+        "completed-docs": [true, "enums", "functions", "methods", "properties", "interfaces"]
     }
 }
