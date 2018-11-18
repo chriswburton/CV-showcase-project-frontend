@@ -29,6 +29,15 @@ export class JobService {
   }
 
   /**
+   * To find a particular job quickly, we'll provide a method for filtering
+   * @param queryStr A search query string that we'll compare against the title of each job advert
+   */
+  filterJobAdverts(queryStr: string): JobAdvertModel[] {
+    return this.jobs
+      .filter(item => item.jobTitle.toLowerCase().includes(queryStr.toLowerCase()));
+  }
+
+  /**
    * Method for checking whether a given user has enough experience to be deemed suitable for a job
    * @param user The UserModel of the user we wish to perform our check on
    * @param jobAdvert The JobAdvertModel for the job we wish to check our user against

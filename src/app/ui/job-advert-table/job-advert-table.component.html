@@ -1,24 +1,29 @@
 <h2 class="mt-12 mb-4">Job Adverts</h2>
-<table class="w-full">
-  <thead>
-  <tr>
-    <th>Summary</th>
-    <th>Match Checker</th>
-    <th>Link</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr *ngFor="let advert of jobAdverts">
-    <td>{{ advert.getJobSummary() }}</td>
-    <td>
+<p>Search jobs: <input (keyup)="filterJobs($event.target.value)" placeholder="Type here to filter jobs..."></p>
+<p *ngIf="searching; else displayResults">Searching...</p>
+<ng-template #displayResults>
+  <table class="w-full">
+    <thead>
+    <tr>
+      <th>Summary</th>
+      <th>Match Checker</th>
+      <th>Link</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngIf="jobAdverts.length === 0"><td colspan="3">No results matching your search.</td></tr>
+    <tr *ngFor="let advert of jobAdverts">
+      <td>{{ advert.getJobSummary() }}</td>
+      <td>
       <span
         class="badge badge--success"
         *ngIf="js.evaluateUserForJob(activeUser, advert); else notSuitable">Suitable</span>
-      <ng-template #notSuitable>
-        <span class="badge badge--error">Not Suitable</span>
-      </ng-template>
-    </td>
-    <td>Coming Soon!</td>
-  </tr>
-  </tbody>
-</table>
+        <ng-template #notSuitable>
+          <span class="badge badge--error">Not Suitable</span>
+        </ng-template>
+      </td>
+      <td>Coming Soon!</td>
+    </tr>
+    </tbody>
+  </table>
+</ng-template>
