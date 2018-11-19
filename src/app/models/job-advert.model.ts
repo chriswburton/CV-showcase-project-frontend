@@ -1,4 +1,7 @@
+import * as shortid from 'shortid';
+
 export class JobAdvertModel {
+  readonly id: string = shortid.generate();
   organisation: string;
   jobTitle: string;
   salaryBandLowest: number;

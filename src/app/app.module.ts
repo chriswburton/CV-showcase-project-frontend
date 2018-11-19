@@ -12,6 +12,7 @@ import {AuthService} from './services/auth.service';
 import { JobAdvertTableComponent } from './ui/job-advert-table/job-advert-table.component';
 import {JobService} from './services/job.service';
 import { ProfileSummaryComponent } from './ui/profile-summary/profile-summary.component';
+import { ApplicationFormComponent } from './components/application-form/application-form.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ProfileSummaryComponent } from './ui/profile-summary/profile-summary.co
     LogOutComponent,
     LogInComponent,
     JobAdvertTableComponent,
-    ProfileSummaryComponent
+    ProfileSummaryComponent,
+    ApplicationFormComponent
   ],
   imports: [
     BrowserModule,

@@ -24,8 +24,17 @@ export class JobService {
    * Method for getting ALL our job adverts
    * @return Array of all JobAdvertModels within the app
    */
-  getAllJobAdverts() {
+  getAllJobAdverts(): JobAdvertModel[] {
     return this.jobs;
+  }
+
+  /**
+   * Method for getting a specific Job Advert
+   * @param id The id that corresponds to the advert we wish to retrieve
+   * @return The job advert that matches the id we provided (or null if no match can be found)
+   */
+  getJobAdvertById(id: string): JobAdvertModel | null {
+    return this.jobs.find(item => item.id === id);
   }
 
   /**
