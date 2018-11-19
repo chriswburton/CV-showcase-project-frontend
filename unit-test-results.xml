@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<testsuite name="HeadlessChrome 0.0.0 (Mac OS X 10.14.0)" package="" timestamp="2018-11-19T05:49:48" id="0" hostname="Chriss-MacBook-Pro.local" tests="19" errors="0" failures="0" time="0.391">
+  <properties>
+    <property name="browser.fullName" value="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/70.0.3538.102 Safari/537.36"/>
+  </properties>
+  <testcase name="AppComponent should create the app" time="0.078" classname="AppComponent"/>
+  <testcase name="AuthGuard should be created" time="0.012" classname="AuthGuard"/>
+  <testcase name="AuthGuard should block access when user IS NOT authenticated" time="0.011" classname="AuthGuard"/>
+  <testcase name="AuthGuard should allow access when user IS authenticated" time="0.009" classname="AuthGuard"/>
+  <testcase name="ApplicationsComponent should create" time="0.018" classname="ApplicationsComponent"/>
+  <testcase name="DashboardComponent should create" time="0.047" classname="DashboardComponent"/>
+  <testcase name="LogInComponent should create" time="0.024" classname="LogInComponent"/>
+  <testcase name="LogOutComponent should create" time="0.012" classname="LogOutComponent"/>
+  <testcase name="LogOutComponent should log us out &quot;onload&quot;" time="0.012" classname="LogOutComponent"/>
+  <testcase name="AuthService should be created" time="0.009" classname="AuthService"/>
+  <testcase name="AuthService #getAuthenticationStatus should return an initial value of &quot;false&quot;" time="0.013" classname="AuthService"/>
+  <testcase name="AuthService #checkAuthStatus @return should always be consistent with &quot;isAuthenticated&quot; property" time="0.012" classname="AuthService"/>
+  <testcase name="JobService should be created" time="0.007" classname="JobService"/>
+  <testcase name="UserService should be created" time="0.005" classname="UserService"/>
+  <testcase name="HeaderComponent should create" time="0.023" classname="HeaderComponent"/>
+  <testcase name="JobAdvertTableComponent should create" time="0.029" classname="JobAdvertTableComponent"/>
+  <testcase name="ProfileSummaryComponent should create" time="0.023" classname="ProfileSummaryComponent"/>
+  <testcase name="ProfileSummaryComponent should render a &quot;Welcome back&quot; message in an h2 tag" time="0.024" classname="ProfileSummaryComponent"/>
+  <testcase name="ProfileSummaryComponent should contain 3 card sections" time="0.023" classname="ProfileSummaryComponent"/>
+  <system-out>
+    <![CDATA[
+]]>
+  </system-out>
+  <system-err/>
+</testsuite>

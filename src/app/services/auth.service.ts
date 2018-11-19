@@ -56,4 +56,12 @@ export class AuthService {
     this.isAuthenticated = true;
     this.router.navigateByUrl('dashboard');
   }
+
+  /**
+   * Method to destroy our internal state and return us to the 'LogIn' view where we can re-authenticate.
+   */
+  logOut() {
+    this.isAuthenticated = false;
+    this.router.navigateByUrl('log-in');
+  }
 }

@@ -1,6 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LogOutComponent } from './log-out.component';
+import {AuthService} from '../../services/auth.service';
+import {Router} from '@angular/router';
+import {RouterStub} from '../../test.stubs';
 
 describe('LogOutComponent', () => {
   let component: LogOutComponent;
@@ -8,7 +11,11 @@ describe('LogOutComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LogOutComponent ]
+      declarations: [ LogOutComponent ],
+      providers: [
+        AuthService,
+        { provide: Router, useClass: RouterStub }
+      ]
     })
     .compileComponents();
   }));
@@ -21,5 +28,10 @@ describe('LogOutComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should log us out "onload"', () => {
+    const service = TestBed.get(AuthService);
+    expect(service.getAuthenticationStatus()).toEqual(false);
   });
 });
